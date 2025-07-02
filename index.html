@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- <header>
+    <div class="content-fit">
+      <div class="logo">LunDev</div>
+      <nav>
+        <ul>
+          <li>Contacts</li>
+          <li>Category</li>
+          <li>Login</li>
+        </ul>
+      </nav>
+    </div>
+  </header> -->
+  <div class="section" id="banner">
+    <div class="content-fit">
+      <div class="title" data-before="PELIGROSIS">Brayan ❤️ María</div>
+      <div class="subtitle" style="text-align: center;">Un pequeño rincón digital solo para recordarte cuánto te quiero
+      </div>
+    </div>
+    <img src="img/flower.png" class="decorate" alt="" style="width: 50vw; bottom: 0; right: 0;">
+    <img src="img/leaf.png" class="decorate" alt="" style="width: 30vw; bottom: 0; left: 0;">
+  </div>
+  <div class="section" id="intro">
+    <div class="content-fit">
+      <div class="number">01</div>
+      <div class="des">
+        <div class="title">Aceptación y sinceridad</div>
+        <p>Sé que no soy perfecto. He cometido errores y a veces he fallado, pero si algo ha sido verdadero desde el
+          inicio, son mis sentimientos por ti.
+          Cada día intento ser mejor, no solo por mí, sino porque tú mereces lo mejor de mí. Por nosotros.</p>
+      </div>
+    </div>
+  </div>
+  <div class="section" id="description">
+    <div class="content-fit">
+      <div class="number">02</div>
+      <div class="des">
+        <div class="title">Mi deseo</div>
+        <p>SEGUIR CONSTRUYENDO MOMENTOS A TU LADO <br><br>
+          Quiero seguir creando contigo recuerdos que nos hagan sonreír incluso en los días difíciles.<br>
+          Reír hasta doler, abrazarte en silencio, perdernos en pequeñas aventuras.<br>
+          Ojalá la vida nos regale muchos más momentos para compartir, para sentirnos, para amarnos.</p>
+      </div>
+    </div>
+    <img src="img/leaf1.png" class="decorate" alt="" style="width: 70vw; bottom: 0; right: 0; z-index: 101;">
+  </div>
+  <div class="section" id="contact">
+    <div class="content-fit">
+      <div class="number">03</div>
+      <div class="des">
+        <div class="title">GRACIAS</div>
+        <table>
+          <tr>
+            <td>por estar,</td>
+
+          </tr>
+          <tr>
+            <td>por quedarte,</td>
+          </tr>
+          <tr>
+            <td>por ser tú.</td>
+          </tr>
+          <tr>
+            <td>Pase lo que pase, en este corazón siempre habrá un rincón inmenso que te pertenece.
+              Te amo más allá de las palabras, más allá de lo que puedo explicar. Simplemente, te amo.</td>
+          </tr>
+        </table>
+        <div class="sign">Maria</div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="subtitle" style="text-align: center; font-size: 1.2em;">"PORQUE SÓLO ES PENSAR EN TI Y ACABAR
+          PERDIDO."
+        </div>
+        <span>— Nacho Vegas, “Me he perdido”</span>
+        <div class="mensaje-final"
+          style="font-size: 1.2em; text-align: center; max-width: 800px; margin: auto; padding: 2em;">
+          Y es que cada vez que pienso en ti, me pierdo…<br>
+          Me pierdo en tus ojos, en tus abrazos, en las veces que me has hecho sentir que el mundo puede ser un lugar
+          más bonito.<br>
+          No me pierdo por no saber a dónde voy, sino porque cuando estás tú, todo lo demás deja de importar.<br>
+          Perderme en ti no es confusión, es entrega.<br>
+          Es saber que, aunque no tenga todas las respuestas, quiero que sigas siendo parte del camino.
+        </div>
+        <br><br><br><br><br><br><br>
+      </div>
+    </div>
+  </div>
+  <div class="section" id="banner">
+    <div class="content-fit">
+      <div class="title" data-before="🦋">María Piedad</div>
+      <br><br>
+      <div class="subtitle" style="text-align: center;">Tan dulce como el cielo, tan intensa como el fuego. Un alma
+        hermosa que ama sin miedo y vive sin freno.
+      </div>
+    </div>
+    <img src="img/flower.png" class="decorate" alt="" style="width: 50vw; bottom: 0; right: 0;">
+    <img src="img/leaf.png" class="decorate" alt="" style="width: 30vw; bottom: 0; left: 0;">
+  </div>
+</body>
+<audio id="audio" autoplay loop>
+  <source src="cancion.mp3" type="audio/mpeg">
+  Tu navegador no soporta el audio.
+</audio>
+
+<script>
+  // Intenta reproducir el audio apenas cargue la página
+  window.addEventListener('load', () => {
+    const audio = document.getElementById('audio');
+    const playPromise = audio.play();
+
+    // Algunos navegadores solo permiten autoplay si el audio está muteado o hay interacción del usuario
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        // Si falla, puedes mostrar un botón para activarlo manualmente
+        const button = document.createElement('button');
+        button.innerText = '🔊 Activar música';
+        button.style.position = 'fixed';
+        button.style.bottom = '1em';
+        button.style.right = '1em';
+        button.style.padding = '1em';
+        button.style.backgroundColor = '#d1ff48';
+        button.style.color = '#1B1B1B';
+        button.style.border = 'none';
+        button.style.borderRadius = '10px';
+        button.style.cursor = 'pointer';
+        button.style.zIndex = '1000';
+
+        button.onclick = () => {
+          audio.play();
+          button.remove();
+        };
+
+        document.body.appendChild(button);
+      });
+    }
+  });
+</script>
+
+
+<div id="container3D"></div>
+<script type="module" src="app.js"></script>
+
+</html>
