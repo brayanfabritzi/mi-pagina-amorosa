@@ -64,7 +64,7 @@ const sectionConfigs = {
 
 // === CARGAR MODELO ===
 const loader = new GLTFLoader();
-loader.load('/ghost_boy.glb',
+loader.load('./ghost_boy.glb',
   (gltf) => {
     bee = gltf.scene;
     bee.scale.set(0.8, 0.8, 0.8); // Escala ajustable
