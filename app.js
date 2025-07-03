@@ -41,7 +41,7 @@ let isAnimating = false;
 // === POSICIONES POR SECCIÓN MEJORADAS ===
 const sectionConfigs = {
   'banner': {
-    position: { x: 0, y: -1, z: 0 },
+    position: { x: 0, y: -1.5, z: 0 },
     rotation: { x: 0, y: 1.5, z: 0 },
     camera: { z: 10, fov: 35 }
   },
